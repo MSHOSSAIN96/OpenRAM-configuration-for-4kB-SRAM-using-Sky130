@@ -617,7 +617,8 @@ This organized structure provides clarity on the role of each component and thei
 
 **Chapter 03: OpenRAM Technology setup**
 
-
+The OpenRAM compiler is currently available for two technologies, namely - SCMOS and FreePDK45. For adding a new technology support to OpenRAM, a directory with name of process node should be created in technology directory of OpenRAM.
+ 
 ![Screenshot 2024-12-24 165819](https://github.com/user-attachments/assets/117b9ff5-ca9d-4de9-898b-6bf750bc7085)
 
 
