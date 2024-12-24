@@ -20,6 +20,10 @@ Main Objectives:
      
 **Chapter 1: Introduction**
 
+
+![Screenshot 2024-12-24 165819](https://github.com/user-attachments/assets/247edf23-d829-4028-bab0-45cddf62a803)
+
+
 Purpose: OpenRAM is a Python-based framework used to design and compile SRAM (Static Random-Access Memory).
 
 Inputs:OpenRAM takes the following as input:
@@ -77,7 +81,9 @@ IP Deliverables: The table on the right details specific formats for the output 
 .py: Python configuration files for reproducibility or modifications.
 
 
-**1. OpenRAM SRAM Architecture**
+**OpenRAM SRAM Architecture**
+
+![sram_arch](https://github.com/user-attachments/assets/98dc6e05-9601-43fb-8c2d-9562f231cef9)
 
 The diagram highlights the essential building blocks of the SRAM architecture designed using OpenRAM:
 
@@ -97,11 +103,11 @@ Sense Amplifiers: Amplify small signals from the bitlines during a read operatio
 
 Control Logic: Coordinates the overall operation of the SRAM, including timing and control signals.
 
-**2. Configurability**
+**Configurability**
 
 OpenRAM is configurable for any technology, making it versatile for different fabrication processes.
 
-**3. Supported Technologies**
+**Supported Technologies**
 
 Currently, OpenRAM supports two main technologies:
 
@@ -109,7 +115,7 @@ FreePDK45: A 45nm non-fabricable process used for academic and simulation purpos
 
 SCMOS: A 25µm fabricable process.
 
-**4. Configuring for SKY130 Technology**
+**Configuring for SKY130 Technology**
 
 The next step in OpenRAM's development is to configure its SRAM architecture for the SkyWater 130nm process technology. This is an open PDK that supports fabrication.
 
@@ -614,7 +620,7 @@ This organized structure provides clarity on the role of each component and thei
 
 ![Screenshot 2024-12-24 165819](https://github.com/user-attachments/assets/117b9ff5-ca9d-4de9-898b-6bf750bc7085)
 
-models directory sky parametrs. 
+
 
 
 
