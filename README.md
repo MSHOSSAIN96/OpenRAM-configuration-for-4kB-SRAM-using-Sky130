@@ -1,6 +1,23 @@
 # OpenRAM-configuration-for-4kB-SRAM-using-Sky130
 OpenRAM is an open-source SRAM compiler. It is a completely Python-based framework, technology independent memory compiler. 
 
+Static Random-Access Memory (SRAM) has become a standard element of any Application Specific Integrated Circuit (ASIC), System-On-Chip (SoC), or other micro-architectures. For this wide variety of applications, SRAMs are configured using parameters like the word-length, bit lines, operating voltage, access time, and most importantly the technology node. The access time of an SRAM cell is the time require for a read or write operation of SRAM.
+
+Manually configuring the SRAM for every change in parameter seems a slightly in-efficient and tedious task. Due to this reason, the memory compiler is used on a large scale, as it facilitates easy configuration and optimization of memory. OpenRAM, an open-source memory compiler is used for characterization and generation of SRAM designs.
+
+This webinar mentioned multiple open-source circuit schematic design, layout design, SPICE simulations tools and memory compiler. The tools used are explained in detail. All the Skywater SKY130 PDKs related files are added to the repository mentioned in webinar, which can be used without installing the complete PDKs. To install or get other details of Skywater PDKs, it can be found in Skywater official website.
+
+Main Objectives: 
+
+    1.Configure open-source memory compiler OpenRAM for any memory size
+    2.SRAM custom cell design
+    3.Memory GDS/Lib/Lef file types
+
+ Achievements:
+
+     1.From here, I will discuss about various custom cells like 6T-SRAM, DFF
+     2.I will configure open-source memory compiler OpenRAM for custom memory IP generation
+     
 **Chapter 1: Introduction**
 
 Purpose: OpenRAM is a Python-based framework used to design and compile SRAM (Static Random-Access Memory).
@@ -153,6 +170,65 @@ The compiler takes design constraints as input (e.g., size, spacing) and automat
 This approach eliminates manual editing of each cell, saving time and reducing errors, particularly in large memory designs.
 
 The explanation is now structured to flow logically, emphasizing the challenges and how OpenRAM addresses them efficiently.
+
+
+**Chapter 2: Environmental Setup and custom cells description**
+
+Environmental Setup
+
+Install Python Dependencies: 
+           
+           1.Python 3.5 or higher
+           2.Python numpy
+           3.Python scipy
+
+In the Linux shell, I have to be installed the following packages: 
+
+                $ sudo apt install -y python3-pip
+                $pip3 install numpy
+                $pip3 install scipy
+                
+In order to get git clone, we need to clone official OpenRAM repository
+
+              $ git clone https://github.com/VLSIDA/OpenRAM.git
+
+
+Next the OpenRAM needs to decide some environment varaiables:
+
+  1.OPENRAM_HOME   export OPENRAM_HOME = <path-to-compiler>
+  2.OPENRAM_TECH   export OPENRAM_TECH = <path-to-technology-files>
+  3.PYTHONPATH     export PYTHONPATH = "$PYTHONPATH:$OPENRAM_HOME"
+
+Install Spice Simulator
+         1. NGSPICE
+      
+Install Layout tools: 
+         1.MAGIC Layout Tool
+         2. KLayout
+
+In order to check whether I have the required dependencies I can use
+
+**python3 --version**
+
+After completing clone, we will directly enter OpenRAM directly. 
+
+To set environment variables, I need to edit bashrc file. 
+
+In the bashrc file I need to export few paths for the OpenRAM Variables. 
+
+![1](https://github.com/user-attachments/assets/7fbcd7ff-0bdb-4880-88c3-cb877a617dbc)
+
+
+![Screenshot from 2024-12-24 19-26-48](https://github.com/user-attachments/assets/a3241203-1348-46d9-ba7b-dc889c410f61)
+
+
+![Screenshot from 2024-12-24 19-26-34](https://github.com/user-attachments/assets/0ab2345a-fe8e-4e9a-a56f-7858cdf7e383)
+
+
+
+
+  
+
 
 
 
